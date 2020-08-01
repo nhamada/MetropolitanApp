@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353D371824D5A305004889A5 /* MET_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371424D5A2FF004889A5 /* MET_Base.framework */; };
+		353D371924D5A305004889A5 /* MET_Base.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371424D5A2FF004889A5 /* MET_Base.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		353D371B24D5A307004889A5 /* MuseumUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; };
+		353D371C24D5A307004889A5 /* MuseumUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B8980324D2DB9500688368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B897FE24D2DB9500688368 /* Assets.xcassets */; };
 		35B8980624D2DBAF00688368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B8980524D2DBAF00688368 /* LaunchScreen.storyboard */; };
 		35B8980B24D2DBBC00688368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B8980724D2DBBC00688368 /* Main.storyboard */; };
@@ -15,7 +19,24 @@
 		35B8980E24D2DBBC00688368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8980A24D2DBBC00688368 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		353D371A24D5A305004889A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				353D371C24D5A307004889A5 /* MuseumUI.framework in Embed Frameworks */,
+				353D371924D5A305004889A5 /* MET_Base.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		353D371424D5A2FF004889A5 /* MET_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MET_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		353D371624D5A2FF004889A5 /* MuseumUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MuseumUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B897E424D2DABA00688368 /* MET App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MET App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B897FD24D2DB9500688368 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35B897FE24D2DB9500688368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,18 +52,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353D371B24D5A307004889A5 /* MuseumUI.framework in Frameworks */,
+				353D371824D5A305004889A5 /* MET_Base.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353D371324D5A2FF004889A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				353D371424D5A2FF004889A5 /* MET_Base.framework */,
+				353D371624D5A2FF004889A5 /* MuseumUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		35B897DB24D2DAB900688368 = {
 			isa = PBXGroup;
 			children = (
 				35B897FC24D2DB1E00688368 /* Sources */,
 				35B897FB24D2DB1700688368 /* Resources */,
 				35B897E524D2DABA00688368 /* Products */,
+				353D371324D5A2FF004889A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +118,7 @@
 				35B897E024D2DAB900688368 /* Sources */,
 				35B897E124D2DAB900688368 /* Frameworks */,
 				35B897E224D2DAB900688368 /* Resources */,
+				353D371A24D5A305004889A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

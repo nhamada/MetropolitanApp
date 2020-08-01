@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:App/MET App.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Base/MET Base.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:App/MET App.xcodeproj">
+      location = "group:MUI/MuseumUI.xcodeproj">
    </FileRef>
 </Workspace>

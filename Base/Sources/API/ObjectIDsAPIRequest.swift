@@ -25,10 +25,6 @@ public final class ObjectIDsAPIRequestParameter: RequestParameter {
         return items
     }
     
-    public var body: Data? {
-        nil
-    }
-    
     private let metadataDate: Date?
     private let departmentIds: [Int]
     

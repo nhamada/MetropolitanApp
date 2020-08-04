@@ -36,6 +36,11 @@ public protocol RequestParameter {
     var body: Data? { get }
 }
 
+public extension RequestParameter {
+    var queryItems: [URLQueryItem]? { nil }
+    var body: Data? { nil }
+}
+
 public protocol Request {
     associatedtype Parameter: RequestParameter
     

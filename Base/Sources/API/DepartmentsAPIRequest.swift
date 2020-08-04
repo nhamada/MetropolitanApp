@@ -11,13 +11,6 @@ import Foundation
 public typealias DepartmentsAPIService = METNetworkService<DepartmentsAPIRequest, DepartmentsAPIResponse>
 
 public final class DepartmentsAPIRequestParameter: RequestParameter {
-    public var queryItems: [URLQueryItem]? {
-        nil
-    }
-    
-    public var body: Data? {
-        nil
-    }
 }
 
 public final class DepartmentsAPIRequest: Request {

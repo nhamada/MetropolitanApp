@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		353D36F424D5A184004889A5 /* MET_Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 353D36F224D5A184004889A5 /* MET_Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */; };
+		35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD124D83B7600B2DFE1 /* Request.swift */; };
+		35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD324D83B7F00B2DFE1 /* Response.swift */; };
+		35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD624D9B23700B2DFE1 /* DepartmentsAPIRequest.swift */; };
+		35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD824D9B49700B2DFE1 /* DepartmentsAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		353D36EF24D5A184004889A5 /* MET_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MET_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353D36F224D5A184004889A5 /* MET_Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MET_Base.h; sourceTree = "<group>"; };
 		353D36F324D5A184004889A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		35F46BD124D83B7600B2DFE1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		35F46BD324D83B7F00B2DFE1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		35F46BD624D9B23700B2DFE1 /* DepartmentsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsAPIRequest.swift; sourceTree = "<group>"; };
+		35F46BD824D9B49700B2DFE1 /* DepartmentsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsAPIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,9 @@
 		353D36FA24D5A194004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				35F46BD524D9B0C300B2DFE1 /* API */,
+				35F46BD024D83B6900B2DFE1 /* Network */,
+				35F46BCD24D83A5900B2DFE1 /* Service */,
 				353D36F224D5A184004889A5 /* MET_Base.h */,
 			);
 			path = Sources;
@@ -58,6 +71,32 @@
 				353D36F324D5A184004889A5 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		35F46BCD24D83A5900B2DFE1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		35F46BD024D83B6900B2DFE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BD124D83B7600B2DFE1 /* Request.swift */,
+				35F46BD324D83B7F00B2DFE1 /* Response.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		35F46BD524D9B0C300B2DFE1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BD624D9B23700B2DFE1 /* DepartmentsAPIRequest.swift */,
+				35F46BD824D9B49700B2DFE1 /* DepartmentsAPIResponse.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +142,7 @@
 				TargetAttributes = {
 					353D36EE24D5A184004889A5 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -139,6 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */,
+				35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */,
+				35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */,
+				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
+				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SV4PDXXNFK;
@@ -285,6 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.toifactory.metmuseum.MET-Base";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SV4PDXXNFK;

@@ -17,6 +17,8 @@
 		35F46BDD24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BDC24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift */; };
 		35F46BDF24DAE39B00B2DFE1 /* SearchAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BDE24DAE39B00B2DFE1 /* SearchAPIRequest.swift */; };
 		35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE024DAE70D00B2DFE1 /* SearchAPIResponse.swift */; };
+		35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE224DAF25B00B2DFE1 /* ObjectAPIRequest.swift */; };
+		35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE424DAF29B00B2DFE1 /* ObjectAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		35F46BDC24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIDsAPIResponse.swift; sourceTree = "<group>"; };
 		35F46BDE24DAE39B00B2DFE1 /* SearchAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIRequest.swift; sourceTree = "<group>"; };
 		35F46BE024DAE70D00B2DFE1 /* SearchAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIResponse.swift; sourceTree = "<group>"; };
+		35F46BE224DAF25B00B2DFE1 /* ObjectAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAPIRequest.swift; sourceTree = "<group>"; };
+		35F46BE424DAF29B00B2DFE1 /* ObjectAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAPIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				35F46BDA24D9BB0E00B2DFE1 /* ObjectIDsAPIRequest.swift */,
 				35F46BDC24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift */,
+				35F46BE224DAF25B00B2DFE1 /* ObjectAPIRequest.swift */,
+				35F46BE424DAF29B00B2DFE1 /* ObjectAPIResponse.swift */,
 				35F46BD624D9B23700B2DFE1 /* DepartmentsAPIRequest.swift */,
 				35F46BD824D9B49700B2DFE1 /* DepartmentsAPIResponse.swift */,
 				35F46BDE24DAE39B00B2DFE1 /* SearchAPIRequest.swift */,
@@ -194,9 +200,11 @@
 				35F46BDB24D9BB0E00B2DFE1 /* ObjectIDsAPIRequest.swift in Sources */,
 				35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */,
 				35F46BDF24DAE39B00B2DFE1 /* SearchAPIRequest.swift in Sources */,
+				35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */,
 				35F46BDD24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift in Sources */,
 				35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */,
 				35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */,
+				35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */,
 				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
 				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 				35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */,

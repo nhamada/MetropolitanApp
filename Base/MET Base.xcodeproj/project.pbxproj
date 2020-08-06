@@ -19,6 +19,12 @@
 		35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE024DAE70D00B2DFE1 /* SearchAPIResponse.swift */; };
 		35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE224DAF25B00B2DFE1 /* ObjectAPIRequest.swift */; };
 		35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE424DAF29B00B2DFE1 /* ObjectAPIResponse.swift */; };
+		35F46BE824DC27BC00B2DFE1 /* ObjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE724DC27BC00B2DFE1 /* ObjectRepository.swift */; };
+		35F46BEA24DC287E00B2DFE1 /* DepartmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BE924DC287E00B2DFE1 /* DepartmentRepository.swift */; };
+		35F46BEC24DC2B6B00B2DFE1 /* METDepartmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BEB24DC2B6B00B2DFE1 /* METDepartmentRepository.swift */; };
+		35F46BEE24DC414C00B2DFE1 /* METObjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BED24DC414C00B2DFE1 /* METObjectRepository.swift */; };
+		35F46BF024DC48AF00B2DFE1 /* ObjectIDListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BEF24DC48AF00B2DFE1 /* ObjectIDListRepository.swift */; };
+		35F46BF224DC49A800B2DFE1 /* METObjectIDListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		35F46BE024DAE70D00B2DFE1 /* SearchAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIResponse.swift; sourceTree = "<group>"; };
 		35F46BE224DAF25B00B2DFE1 /* ObjectAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAPIRequest.swift; sourceTree = "<group>"; };
 		35F46BE424DAF29B00B2DFE1 /* ObjectAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAPIResponse.swift; sourceTree = "<group>"; };
+		35F46BE724DC27BC00B2DFE1 /* ObjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRepository.swift; sourceTree = "<group>"; };
+		35F46BE924DC287E00B2DFE1 /* DepartmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentRepository.swift; sourceTree = "<group>"; };
+		35F46BEB24DC2B6B00B2DFE1 /* METDepartmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METDepartmentRepository.swift; sourceTree = "<group>"; };
+		35F46BED24DC414C00B2DFE1 /* METObjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectRepository.swift; sourceTree = "<group>"; };
+		35F46BEF24DC48AF00B2DFE1 /* ObjectIDListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIDListRepository.swift; sourceTree = "<group>"; };
+		35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectIDListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 		353D36FA24D5A194004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				35F46BE624DC27A800B2DFE1 /* Repository */,
 				35F46BD524D9B0C300B2DFE1 /* API */,
 				35F46BD024D83B6900B2DFE1 /* Network */,
 				35F46BCD24D83A5900B2DFE1 /* Service */,
@@ -115,6 +128,19 @@
 				35F46BE024DAE70D00B2DFE1 /* SearchAPIResponse.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		35F46BE624DC27A800B2DFE1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BE724DC27BC00B2DFE1 /* ObjectRepository.swift */,
+				35F46BED24DC414C00B2DFE1 /* METObjectRepository.swift */,
+				35F46BEF24DC48AF00B2DFE1 /* ObjectIDListRepository.swift */,
+				35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */,
+				35F46BE924DC287E00B2DFE1 /* DepartmentRepository.swift */,
+				35F46BEB24DC2B6B00B2DFE1 /* METDepartmentRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,14 +223,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F46BEE24DC414C00B2DFE1 /* METObjectRepository.swift in Sources */,
+				35F46BF224DC49A800B2DFE1 /* METObjectIDListRepository.swift in Sources */,
 				35F46BDB24D9BB0E00B2DFE1 /* ObjectIDsAPIRequest.swift in Sources */,
+				35F46BEA24DC287E00B2DFE1 /* DepartmentRepository.swift in Sources */,
 				35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */,
 				35F46BDF24DAE39B00B2DFE1 /* SearchAPIRequest.swift in Sources */,
 				35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */,
+				35F46BE824DC27BC00B2DFE1 /* ObjectRepository.swift in Sources */,
+				35F46BF024DC48AF00B2DFE1 /* ObjectIDListRepository.swift in Sources */,
 				35F46BDD24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift in Sources */,
 				35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */,
 				35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */,
 				35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */,
+				35F46BEC24DC2B6B00B2DFE1 /* METDepartmentRepository.swift in Sources */,
 				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
 				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 				35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */,

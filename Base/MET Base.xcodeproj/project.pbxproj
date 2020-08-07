@@ -25,6 +25,10 @@
 		35F46BEE24DC414C00B2DFE1 /* METObjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BED24DC414C00B2DFE1 /* METObjectRepository.swift */; };
 		35F46BF024DC48AF00B2DFE1 /* ObjectIDListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BEF24DC48AF00B2DFE1 /* ObjectIDListRepository.swift */; };
 		35F46BF224DC49A800B2DFE1 /* METObjectIDListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */; };
+		35F46BF524DD842200B2DFE1 /* METObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BF424DD842200B2DFE1 /* METObject.swift */; };
+		35F46BF924DD848000B2DFE1 /* METDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BF824DD848000B2DFE1 /* METDepartment.swift */; };
+		35F46BFB24DD85DE00B2DFE1 /* METObjectConstituent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */; };
+		35F46BFD24DD85F400B2DFE1 /* METObjectTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		35F46BED24DC414C00B2DFE1 /* METObjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectRepository.swift; sourceTree = "<group>"; };
 		35F46BEF24DC48AF00B2DFE1 /* ObjectIDListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIDListRepository.swift; sourceTree = "<group>"; };
 		35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectIDListRepository.swift; sourceTree = "<group>"; };
+		35F46BF424DD842200B2DFE1 /* METObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObject.swift; sourceTree = "<group>"; };
+		35F46BF824DD848000B2DFE1 /* METDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METDepartment.swift; sourceTree = "<group>"; };
+		35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectConstituent.swift; sourceTree = "<group>"; };
+		35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectTag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		353D36FA24D5A194004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				35F46BF324DD841100B2DFE1 /* Entity */,
 				35F46BE624DC27A800B2DFE1 /* Repository */,
 				35F46BD524D9B0C300B2DFE1 /* API */,
 				35F46BD024D83B6900B2DFE1 /* Network */,
@@ -141,6 +150,17 @@
 				35F46BEB24DC2B6B00B2DFE1 /* METDepartmentRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		35F46BF324DD841100B2DFE1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BF424DD842200B2DFE1 /* METObject.swift */,
+				35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */,
+				35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */,
+				35F46BF824DD848000B2DFE1 /* METDepartment.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,16 +247,20 @@
 				35F46BF224DC49A800B2DFE1 /* METObjectIDListRepository.swift in Sources */,
 				35F46BDB24D9BB0E00B2DFE1 /* ObjectIDsAPIRequest.swift in Sources */,
 				35F46BEA24DC287E00B2DFE1 /* DepartmentRepository.swift in Sources */,
+				35F46BFD24DD85F400B2DFE1 /* METObjectTag.swift in Sources */,
 				35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */,
+				35F46BF524DD842200B2DFE1 /* METObject.swift in Sources */,
 				35F46BDF24DAE39B00B2DFE1 /* SearchAPIRequest.swift in Sources */,
 				35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */,
 				35F46BE824DC27BC00B2DFE1 /* ObjectRepository.swift in Sources */,
 				35F46BF024DC48AF00B2DFE1 /* ObjectIDListRepository.swift in Sources */,
+				35F46BFB24DD85DE00B2DFE1 /* METObjectConstituent.swift in Sources */,
 				35F46BDD24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift in Sources */,
 				35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */,
 				35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */,
 				35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */,
 				35F46BEC24DC2B6B00B2DFE1 /* METDepartmentRepository.swift in Sources */,
+				35F46BF924DD848000B2DFE1 /* METDepartment.swift in Sources */,
 				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
 				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 				35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */,

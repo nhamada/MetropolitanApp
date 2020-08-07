@@ -14,7 +14,7 @@ public enum ObjectLoadError: Error {
 }
 
 public protocol ObjectRepository {
-    typealias LoadCompletionHandler = (Result<ObjectAPIResponse, ObjectLoadError>) -> Void
+    typealias LoadCompletionHandler = (Result<METObject, ObjectLoadError>) -> Void
     
     func load(objectId: Int, completion: @escaping LoadCompletionHandler)
 }

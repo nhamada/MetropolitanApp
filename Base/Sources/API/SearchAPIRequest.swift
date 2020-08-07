@@ -8,10 +8,10 @@
 
 import Foundation
 
-public typealias SearchAPIService = METNetworkService<SearchAPIRequest, SearchAPIResponse>
+internal typealias SearchAPIService = METNetworkService<SearchAPIRequest, SearchAPIResponse>
 
-public final class SearchAPIRequestParameter: RequestParameter {
-    public var queryItems: [URLQueryItem]? {
+internal final class SearchAPIRequestParameter: RequestParameter {
+    internal var queryItems: [URLQueryItem]? {
         var items: [URLQueryItem] = [URLQueryItem(name: "q",
                                                   value: query)]
         
@@ -69,15 +69,15 @@ public final class SearchAPIRequestParameter: RequestParameter {
     private let geoLocations: [String]?
     private let dateRange: Range<Int>?
     
-    public init(query: String,
-                isHighlight: Bool? = nil,
-                departmentId: Int? = nil,
-                isOnView: Bool? = nil,
-                artistOrCulture: Bool? = nil,
-                mediums: [String]? = nil,
-                hasImages: Bool? = nil,
-                geoLocations: [String]? = nil,
-                dateRange: Range<Int>? = nil) {
+    internal init(query: String,
+                  isHighlight: Bool? = nil,
+                  departmentId: Int? = nil,
+                  isOnView: Bool? = nil,
+                  artistOrCulture: Bool? = nil,
+                  mediums: [String]? = nil,
+                  hasImages: Bool? = nil,
+                  geoLocations: [String]? = nil,
+                  dateRange: Range<Int>? = nil) {
         self.query = query
         self.isHighlight = isHighlight
         self.departmentId = departmentId
@@ -90,28 +90,28 @@ public final class SearchAPIRequestParameter: RequestParameter {
     }
 }
 
-public final class SearchAPIRequest: Request {
-    public typealias Parameter = SearchAPIRequestParameter
+internal final class SearchAPIRequest: Request {
+    internal typealias Parameter = SearchAPIRequestParameter
     
-    public let parameter: Parameter?
+    internal let parameter: Parameter?
     
-    public var scheme: String {
+    internal var scheme: String {
         "https"
     }
     
-    public var hostname: String {
+    internal var hostname: String {
         "collectionapi.metmuseum.org"
     }
     
-    public var path: String {
+    internal var path: String {
         "/public/collection/v1/search"
     }
     
-    public var method: HTTPRequestMethod {
+    internal var method: HTTPRequestMethod {
         .get
     }
     
-    public init(parameter: Parameter? = nil) {
+    internal init(parameter: Parameter? = nil) {
         self.parameter = parameter
     }
 }

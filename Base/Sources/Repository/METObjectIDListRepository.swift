@@ -9,21 +9,23 @@
 import Foundation
 
 
-public final class METObjectIDListRepository: ObjectIDListRepository {
+internal final class METObjectIDListRepository: ObjectIDListRepository {
     private let objectIdService: ObjectIDsAPIService
     private let searchService: SearchAPIService
     
-    public init(objectIdService: ObjectIDsAPIService,
-                searchService: SearchAPIService) {
+    internal init(objectIdService: ObjectIDsAPIService,
+                  searchService: SearchAPIService) {
         self.objectIdService = objectIdService
         self.searchService = searchService
     }
     
-    public func loadObjectIDs(departmentId: Int, completion: @escaping LoadIDListCompletionHandler) {
+    public func loadObjectIDs(departmentId: METDepartmentID,
+                              completion: @escaping LoadIDListCompletionHandler) {
         loadObjectIDs(departmentIds: [departmentId], completion: completion)
     }
     
-    public func loadObjectIDs(departmentIds: [Int], completion: @escaping LoadIDListCompletionHandler) {
+    public func loadObjectIDs(departmentIds: [METDepartmentID],
+                              completion: @escaping LoadIDListCompletionHandler) {
         let parameter = ObjectIDsAPIRequestParameter(metadataDate: nil,
                                                      departmentIds: departmentIds)
         let request = ObjectIDsAPIRequest(parameter: parameter)
@@ -47,7 +49,8 @@ public final class METObjectIDListRepository: ObjectIDListRepository {
         })
     }
     
-    public func search(query: String, completion: @escaping LoadIDListCompletionHandler) {
+    public func search(query: String,
+                       completion: @escaping LoadIDListCompletionHandler) {
         let parameter = SearchAPIRequestParameter(query: query,
                                                   isHighlight: nil,
                                                   departmentId: nil,

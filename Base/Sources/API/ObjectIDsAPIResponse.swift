@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct ObjectIDsAPIResponse: Response {
-    public typealias ResponseDecoder = JSONDecoder
+internal struct ObjectIDsAPIResponse: Response {
+    internal typealias ResponseDecoder = JSONDecoder
     
-    public static var decoder: ResponseDecoder {
+    internal static var decoder: ResponseDecoder {
         JSONDecoder()
     }
     
@@ -20,10 +20,10 @@ public struct ObjectIDsAPIResponse: Response {
         case objectIDs = "objectIDs"
     }
     
-    public let total: Int
-    public let objectIDs: [Int]
+    internal let total: Int
+    internal let objectIDs: [Int]
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKey.self)
         self.total = try container.decode(Int.self, forKey: .total)
         self.objectIDs = (try? container.decode([Int].self, forKey: .objectIDs)) ?? []

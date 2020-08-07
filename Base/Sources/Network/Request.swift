@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum HTTPRequestMethod {
+internal enum HTTPRequestMethod {
     case get
     case head
     case post
@@ -31,17 +31,17 @@ public enum HTTPRequestMethod {
     }
 }
 
-public protocol RequestParameter {
+internal protocol RequestParameter {
     var queryItems: [URLQueryItem]? { get }
     var body: Data? { get }
 }
 
-public extension RequestParameter {
+internal extension RequestParameter {
     var queryItems: [URLQueryItem]? { nil }
     var body: Data? { nil }
 }
 
-public protocol Request {
+internal protocol Request {
     associatedtype Parameter: RequestParameter
     
     var parameter: Parameter? { get }
@@ -55,7 +55,7 @@ public protocol Request {
     func make() -> URLRequest
 }
 
-public extension Request {
+internal extension Request {
     func make() -> URLRequest {
         var component = URLComponents()
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol NetworkService {
+internal protocol NetworkService {
     associatedtype Req: Request
     associatedtype Res: Response
     
@@ -20,28 +20,28 @@ public protocol NetworkService {
     func fetch(request: Req, completion: @escaping CompletionHandler)
 }
 
-public enum NetworkServiceError: Error {
+internal enum NetworkServiceError: Error {
     case invalidResponse
     case httpConnectionError(statusCode: Int)
     case noData
     case decodingFailure
 }
 
-public class METNetworkService<In: Request, Out: Response>: NetworkService where Out.ResponseDecoder.Input == Data {
+internal class METNetworkService<In: Request, Out: Response>: NetworkService where Out.ResponseDecoder.Input == Data {
     public typealias Req = In
     public typealias Res = Out
     
-    public typealias CompletionHandler = (Result<Out, NetworkServiceError>) -> Void
+    internal typealias CompletionHandler = (Result<Out, NetworkServiceError>) -> Void
     
-    public let session: URLSession
-    public let sessionConfiguration: URLSessionConfiguration
+    internal let session: URLSession
+    internal let sessionConfiguration: URLSessionConfiguration
     
-    public init(configuration: URLSessionConfiguration) {
+    internal init(configuration: URLSessionConfiguration) {
         self.sessionConfiguration = configuration
         self.session = URLSession(configuration: self.sessionConfiguration)
     }
     
-    public func fetch(request: In, completion: @escaping CompletionHandler) {
+    internal func fetch(request: In, completion: @escaping CompletionHandler) {
         let dataTask = self.session.dataTask(with: request.make(),
                                              completionHandler: { (data, response, error) in
                                                 guard let httpResponse = response as? HTTPURLResponse else {

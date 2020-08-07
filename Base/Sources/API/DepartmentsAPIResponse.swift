@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct DepartmentsAPIResponse: Response {
-    public typealias ResponseDecoder = JSONDecoder
+internal struct DepartmentsAPIResponse: Response {
+    internal typealias ResponseDecoder = JSONDecoder
     
-    public static var decoder: ResponseDecoder {
+    internal static var decoder: ResponseDecoder {
         JSONDecoder()
     }
     
@@ -19,24 +19,24 @@ public struct DepartmentsAPIResponse: Response {
         case departments = "departments"
     }
     
-    public let departments: [Department]
+    internal let departments: [Department]
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKey.self)
         self.departments = (try? container.decode([Department].self, forKey: .departments)) ?? []
     }
 }
 
-public struct Department: Decodable {
+internal struct Department: Decodable {
     private enum CodingKey: String, Swift.CodingKey {
         case id = "departmentId"
         case displayName = "displayName"
     }
     
-    public let id: Int
-    public let displayName: String
+    internal let id: Int
+    internal let displayName: String
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKey.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.displayName = try container.decode(String.self, forKey: .displayName)

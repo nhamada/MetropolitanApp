@@ -8,10 +8,10 @@
 
 import Foundation
 
-public typealias ObjectIDsAPIService = METNetworkService<ObjectIDsAPIRequest, ObjectIDsAPIResponse>
+internal typealias ObjectIDsAPIService = METNetworkService<ObjectIDsAPIRequest, ObjectIDsAPIResponse>
 
-public final class ObjectIDsAPIRequestParameter: RequestParameter {
-    public var queryItems: [URLQueryItem]? {
+internal final class ObjectIDsAPIRequestParameter: RequestParameter {
+    internal var queryItems: [URLQueryItem]? {
         var items: [URLQueryItem] = []
         
         if !departmentIds.isEmpty {
@@ -28,35 +28,35 @@ public final class ObjectIDsAPIRequestParameter: RequestParameter {
     private let metadataDate: Date?
     private let departmentIds: [Int]
     
-    public init(metadataDate: Date? = nil,
-                departmentIds: [Int] = []) {
+    internal init(metadataDate: Date? = nil,
+                  departmentIds: [Int] = []) {
         self.metadataDate = metadataDate
         self.departmentIds = departmentIds
     }
 }
 
-public final class ObjectIDsAPIRequest: Request {
-    public typealias Parameter = ObjectIDsAPIRequestParameter
+internal final class ObjectIDsAPIRequest: Request {
+    internal typealias Parameter = ObjectIDsAPIRequestParameter
     
-    public let parameter: Parameter?
+    internal let parameter: Parameter?
     
-    public var scheme: String {
+    internal var scheme: String {
         "https"
     }
     
-    public var hostname: String {
+    internal var hostname: String {
         "collectionapi.metmuseum.org"
     }
     
-    public var path: String {
+    internal var path: String {
         "/public/collection/v1/objects"
     }
     
-    public var method: HTTPRequestMethod {
+    internal var method: HTTPRequestMethod {
         .get
     }
     
-    public init(parameter: Parameter? = nil) {
+    internal init(parameter: Parameter? = nil) {
         self.parameter = parameter
     }
 }

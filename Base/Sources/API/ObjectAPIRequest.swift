@@ -8,35 +8,35 @@
 
 import Foundation
 
-public typealias ObjectAPIService = METNetworkService<ObjectAPIRequest, ObjectAPIResponse>
+internal typealias ObjectAPIService = METNetworkService<ObjectAPIRequest, ObjectAPIResponse>
 
-public final class ObjectAPIRequestParameter: RequestParameter {
+internal final class ObjectAPIRequestParameter: RequestParameter {
 }
 
-public final class ObjectAPIRequest: Request {
-    public typealias Parameter = ObjectAPIRequestParameter
+internal final class ObjectAPIRequest: Request {
+    internal typealias Parameter = ObjectAPIRequestParameter
     
-    public let parameter: Parameter? = nil
+    internal let parameter: Parameter? = nil
     
-    public var scheme: String {
+    internal var scheme: String {
         "https"
     }
     
-    public var hostname: String {
+    internal var hostname: String {
         "collectionapi.metmuseum.org"
     }
     
-    public var path: String {
+    internal var path: String {
         "/public/collection/v1/objects/\(objectId)"
     }
     
-    public var method: HTTPRequestMethod {
+    internal var method: HTTPRequestMethod {
         .get
     }
     
     private let objectId: Int
     
-    public init(objectId: Int) {
+    internal init(objectId: Int) {
         self.objectId = objectId
     }
 }

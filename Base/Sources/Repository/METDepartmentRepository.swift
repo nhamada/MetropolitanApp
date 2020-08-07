@@ -8,11 +8,11 @@
 
 import Foundation
 
-public final class METDepartmentRepository: DepartmentRepository {
+internal final class METDepartmentRepository: DepartmentRepository {
     
     private let apiService: DepartmentsAPIService
     
-    public init(apiService: DepartmentsAPIService) {
+    internal init(apiService: DepartmentsAPIService) {
         self.apiService = apiService
     }
     
@@ -22,7 +22,8 @@ public final class METDepartmentRepository: DepartmentRepository {
                               completion: {
                                 switch $0 {
                                 case .success(let result):
-                                    completion(.success(result.departments))
+                                    let departments = result.departments.map { METDepartment(from: $0) }
+                                    completion(.success(departments))
                                 case .failure(let error):
                                     switch error {
                                     case .invalidResponse:

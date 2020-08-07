@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct ObjectAPIResponse: Response {
-    public typealias ResponseDecoder = JSONDecoder
+internal struct ObjectAPIResponse: Response {
+    internal typealias ResponseDecoder = JSONDecoder
     
-    public static var decoder: ResponseDecoder {
+    internal static var decoder: ResponseDecoder {
         JSONDecoder()
     }
     
@@ -73,63 +73,63 @@ public struct ObjectAPIResponse: Response {
         case isTimelineWork = "isTimelineWork"
     }
     
-    public let objectId: Int
-    public let isHighlight: Bool
-    public let accessionNumber: String
-    public let accessionYear: String
-    public let isPublicDomain: Bool
-    public let primaryImageURL: URL
-    public let primaryImageSmallURL: URL
-    public let additionalImageURLs: [URL]
-    public let constituents: [Constituent]
-    public let department: String
-    public let objectName: String
-    public let title: String
-    public let culture: String
-    public let period: String
-    public let dynasty: String
-    public let reign: String
-    public let portfolio: String
-    public let artistRole: String
-    public let artistPrefix: String
-    public let artistDisplayName: String
-    public let artistDisplayBio: String
-    public let artistSuffix: String
-    public let artistAlphaSort: String
-    public let artistNationality: String
-    public let artistBeginDate: String
-    public let artistEndDate: String
-    public let artistGender: String
-    public let artistWikidata: URL
-    public let artistULAN: URL
-    public let objectDate: String
-    public let objectBeginDate: Int
-    public let objectEndDate: Int
-    public let medium: String
-    public let dimensions: String
-    public let creditLine: String
-    public let geographyType: String
-    public let city: String
-    public let state: String
-    public let county: String
-    public let country: String
-    public let region: String
-    public let subregion: String
-    public let locale: String
-    public let locus: String
-    public let excavation: String
-    public let river: String
-    public let classification: String
-    public let rightsAndReproduction: String
-    public let linkResource: URL?
-    public let metadataDate: Date
-    public let repository: String
-    public let objectURL: URL?
-    public let tags: [ObjectTag]
-    public let objectWikidata: URL?
-    public let isTimelineWork: Bool
+    internal let objectId: Int
+    internal let isHighlight: Bool
+    internal let accessionNumber: String
+    internal let accessionYear: String
+    internal let isPublicDomain: Bool
+    internal let primaryImageURL: URL
+    internal let primaryImageSmallURL: URL
+    internal let additionalImageURLs: [URL]
+    internal let constituents: [Constituent]
+    internal let department: String
+    internal let objectName: String
+    internal let title: String
+    internal let culture: String
+    internal let period: String
+    internal let dynasty: String
+    internal let reign: String
+    internal let portfolio: String
+    internal let artistRole: String
+    internal let artistPrefix: String
+    internal let artistDisplayName: String
+    internal let artistDisplayBio: String
+    internal let artistSuffix: String
+    internal let artistAlphaSort: String
+    internal let artistNationality: String
+    internal let artistBeginDate: String
+    internal let artistEndDate: String
+    internal let artistGender: String
+    internal let artistWikidata: URL
+    internal let artistULAN: URL
+    internal let objectDate: String
+    internal let objectBeginDate: Int
+    internal let objectEndDate: Int
+    internal let medium: String
+    internal let dimensions: String
+    internal let creditLine: String
+    internal let geographyType: String
+    internal let city: String
+    internal let state: String
+    internal let county: String
+    internal let country: String
+    internal let region: String
+    internal let subregion: String
+    internal let locale: String
+    internal let locus: String
+    internal let excavation: String
+    internal let river: String
+    internal let classification: String
+    internal let rightsAndReproduction: String
+    internal let linkResource: URL?
+    internal let metadataDate: Date
+    internal let repository: String
+    internal let objectURL: URL?
+    internal let tags: [ObjectTag]
+    internal let objectWikidata: URL?
+    internal let isTimelineWork: Bool
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let dateFormatter = ISO8601DateFormatter()
         dateFormatter.formatOptions.insert(.withFractionalSeconds)
         
@@ -193,7 +193,7 @@ public struct ObjectAPIResponse: Response {
     }
 }
 
-public struct Constituent: Decodable {
+internal struct Constituent: Decodable {
     private enum CodingKey: String, Swift.CodingKey {
         case role = "role"
         case name = "name"
@@ -202,13 +202,13 @@ public struct Constituent: Decodable {
         case gender = "gender"
     }
     
-    public let role: String
-    public let name: String
-    public let constituentULAN: URL
-    public let constituentWikidata: URL
-    public let gender: String
+    internal let role: String
+    internal let name: String
+    internal let constituentULAN: URL
+    internal let constituentWikidata: URL
+    internal let gender: String
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKey.self)
         self.role = try container.decode(String.self, forKey: .role)
         self.name = try container.decode(String.self, forKey: .name)
@@ -218,16 +218,16 @@ public struct Constituent: Decodable {
     }
 }
 
-public struct ObjectTag: Decodable {
+internal struct ObjectTag: Decodable {
     private enum CodingKey: String, Swift.CodingKey {
         case term = "term"
         case AAT = "AAT_URL"
     }
     
-    public let term: String
-    public let AAT: URL
+    internal let term: String
+    internal let AAT: URL
     
-    public init(from decoder: Decoder) throws {
+    internal init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKey.self)
         self.term = try container.decode(String.self, forKey: .term)
         self.AAT = try container.decode(URL.self, forKey: .AAT)

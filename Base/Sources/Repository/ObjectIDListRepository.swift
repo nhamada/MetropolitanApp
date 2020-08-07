@@ -14,10 +14,10 @@ public enum ObjectIDListLoadError: Error {
 }
 
 public protocol ObjectIDListRepository {
-    typealias LoadIDListCompletionHandler = (Result<[Int], ObjectIDListLoadError>) -> Void
+    typealias LoadIDListCompletionHandler = (Result<[METObjectID], ObjectIDListLoadError>) -> Void
     
-    func loadObjectIDs(departmentId: Int, completion: @escaping LoadIDListCompletionHandler)
-    func loadObjectIDs(departmentIds: [Int], completion: @escaping LoadIDListCompletionHandler)
+    func loadObjectIDs(departmentId: METDepartmentID, completion: @escaping LoadIDListCompletionHandler)
+    func loadObjectIDs(departmentIds: [METDepartmentID], completion: @escaping LoadIDListCompletionHandler)
     
     func search(query: String, completion: @escaping LoadIDListCompletionHandler)
 }

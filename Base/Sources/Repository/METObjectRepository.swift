@@ -8,20 +8,21 @@
 
 import Foundation
 
-public final class METObjectRepository: ObjectRepository {
+internal final class METObjectRepository: ObjectRepository {
     private let objectService: ObjectAPIService
     
-    public init(objectService: ObjectAPIService) {
+    internal init(objectService: ObjectAPIService) {
         self.objectService = objectService
     }
     
-    public func load(objectId: Int, completion: @escaping LoadCompletionHandler) {
+    public func load(objectId: Int,
+                     completion: @escaping LoadCompletionHandler) {
         let request = ObjectAPIRequest(objectId: objectId)
         self.objectService.fetch(request: request,
                                  completion: {
                                      switch $0 {
                                      case .success(let result):
-                                         completion(.success(result))
+                                         completion(.success(METObject(from: result)))
                                      case .failure(let error):
                                          switch error {
                                          case .invalidResponse:

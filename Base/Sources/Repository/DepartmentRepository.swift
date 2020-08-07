@@ -14,7 +14,7 @@ public enum DepartmentLoadError: Error {
 }
 
 public protocol DepartmentRepository {
-    typealias LoadCompletionHandler = (Result<[Department], DepartmentLoadError>) -> Void
+    typealias LoadCompletionHandler = (Result<[METDepartment], DepartmentLoadError>) -> Void
     
     func load(completion: @escaping LoadCompletionHandler)
 }

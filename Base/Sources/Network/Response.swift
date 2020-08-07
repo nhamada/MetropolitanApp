@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-public protocol Response: Decodable {
+internal protocol Response: Decodable {
     associatedtype ResponseDecoder: TopLevelDecoder
     
     static var decoder: ResponseDecoder { get }

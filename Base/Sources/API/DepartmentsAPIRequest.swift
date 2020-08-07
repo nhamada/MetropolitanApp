@@ -8,32 +8,32 @@
 
 import Foundation
 
-public typealias DepartmentsAPIService = METNetworkService<DepartmentsAPIRequest, DepartmentsAPIResponse>
+internal typealias DepartmentsAPIService = METNetworkService<DepartmentsAPIRequest, DepartmentsAPIResponse>
 
-public final class DepartmentsAPIRequestParameter: RequestParameter {
+internal final class DepartmentsAPIRequestParameter: RequestParameter {
 }
 
-public final class DepartmentsAPIRequest: Request {
-    public typealias Parameter = DepartmentsAPIRequestParameter
+internal final class DepartmentsAPIRequest: Request {
+    internal typealias Parameter = DepartmentsAPIRequestParameter
     
-    public let parameter: Parameter? = nil
+    internal let parameter: Parameter? = nil
     
-    public var scheme: String {
+    internal var scheme: String {
         "https"
     }
     
-    public var hostname: String {
+    internal var hostname: String {
         "collectionapi.metmuseum.org"
     }
     
-    public var path: String {
+    internal var path: String {
         "/public/collection/v1/departments"
     }
     
-    public var method: HTTPRequestMethod {
+    internal var method: HTTPRequestMethod {
         .get
     }
     
-    public init() {
+    internal init() {
     }
 }

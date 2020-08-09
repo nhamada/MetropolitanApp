@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		353D371824D5A305004889A5 /* MET_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371424D5A2FF004889A5 /* MET_Base.framework */; };
-		353D371924D5A305004889A5 /* MET_Base.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371424D5A2FF004889A5 /* MET_Base.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		353D371B24D5A307004889A5 /* MuseumUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; };
 		353D371C24D5A307004889A5 /* MuseumUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B8980324D2DB9500688368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B897FE24D2DB9500688368 /* Assets.xcassets */; };
@@ -17,6 +15,8 @@
 		35B8980C24D2DBBC00688368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8980824D2DBBC00688368 /* SceneDelegate.swift */; };
 		35B8980D24D2DBBC00688368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8980924D2DBBC00688368 /* ViewController.swift */; };
 		35B8980E24D2DBBC00688368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8980A24D2DBBC00688368 /* AppDelegate.swift */; };
+		35F46C0224DFFBF500B2DFE1 /* METBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F46C0124DFFBF500B2DFE1 /* METBase.framework */; };
+		35F46C0324DFFBF500B2DFE1 /* METBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35F46C0124DFFBF500B2DFE1 /* METBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				35F46C0324DFFBF500B2DFE1 /* METBase.framework in Embed Frameworks */,
 				353D371C24D5A307004889A5 /* MuseumUI.framework in Embed Frameworks */,
-				353D371924D5A305004889A5 /* MET_Base.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +45,7 @@
 		35B8980824D2DBBC00688368 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		35B8980924D2DBBC00688368 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35B8980A24D2DBBC00688368 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35F46C0124DFFBF500B2DFE1 /* METBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = METBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F46C0224DFFBF500B2DFE1 /* METBase.framework in Frameworks */,
 				353D371B24D5A307004889A5 /* MuseumUI.framework in Frameworks */,
-				353D371824D5A305004889A5 /* MET_Base.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +64,7 @@
 		353D371324D5A2FF004889A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35F46C0124DFFBF500B2DFE1 /* METBase.framework */,
 				353D371424D5A2FF004889A5 /* MET_Base.framework */,
 				353D371624D5A2FF004889A5 /* MuseumUI.framework */,
 			);

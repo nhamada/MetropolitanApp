@@ -29,6 +29,7 @@
 		35F46BF924DD848000B2DFE1 /* METDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BF824DD848000B2DFE1 /* METDepartment.swift */; };
 		35F46BFB24DD85DE00B2DFE1 /* METObjectConstituent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */; };
 		35F46BFD24DD85F400B2DFE1 /* METObjectTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */; };
+		35F46C0024DFEE6700B2DFE1 /* RepositoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BFF24DFEE6700B2DFE1 /* RepositoryBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		35F46BF824DD848000B2DFE1 /* METDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METDepartment.swift; sourceTree = "<group>"; };
 		35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectConstituent.swift; sourceTree = "<group>"; };
 		35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectTag.swift; sourceTree = "<group>"; };
+		35F46BFF24DFEE6700B2DFE1 /* RepositoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		353D36FA24D5A194004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				35F46BFE24DFEE5700B2DFE1 /* Builder */,
 				35F46BF324DD841100B2DFE1 /* Entity */,
 				35F46BE624DC27A800B2DFE1 /* Repository */,
 				35F46BD524D9B0C300B2DFE1 /* API */,
@@ -161,6 +164,14 @@
 				35F46BF824DD848000B2DFE1 /* METDepartment.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		35F46BFE24DFEE5700B2DFE1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				35F46BFF24DFEE6700B2DFE1 /* RepositoryBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				35F46BEC24DC2B6B00B2DFE1 /* METDepartmentRepository.swift in Sources */,
 				35F46BF924DD848000B2DFE1 /* METDepartment.swift in Sources */,
 				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
+				35F46C0024DFEE6700B2DFE1 /* RepositoryBuilder.swift in Sources */,
 				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 				35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */,
 			);

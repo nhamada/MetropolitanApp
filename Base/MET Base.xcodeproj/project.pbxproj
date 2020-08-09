@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		353D36EF24D5A184004889A5 /* MET_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MET_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		353D36EF24D5A184004889A5 /* METBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = METBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353D36F224D5A184004889A5 /* MET_Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MET_Base.h; sourceTree = "<group>"; };
 		353D36F324D5A184004889A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		353D36F024D5A184004889A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				353D36EF24D5A184004889A5 /* MET_Base.framework */,
+				353D36EF24D5A184004889A5 /* METBase.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,9 +188,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		353D36EE24D5A184004889A5 /* MET Base */ = {
+		353D36EE24D5A184004889A5 /* METBase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 353D36F724D5A184004889A5 /* Build configuration list for PBXNativeTarget "MET Base" */;
+			buildConfigurationList = 353D36F724D5A184004889A5 /* Build configuration list for PBXNativeTarget "METBase" */;
 			buildPhases = (
 				353D36EA24D5A184004889A5 /* Headers */,
 				353D36EB24D5A184004889A5 /* Sources */,
@@ -201,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = "MET Base";
+			name = METBase;
 			productName = "MET Base";
-			productReference = 353D36EF24D5A184004889A5 /* MET_Base.framework */;
+			productReference = 353D36EF24D5A184004889A5 /* METBase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -234,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				353D36EE24D5A184004889A5 /* MET Base */,
+				353D36EE24D5A184004889A5 /* METBase */,
 			);
 		};
 /* End PBXProject section */
@@ -467,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		353D36F724D5A184004889A5 /* Build configuration list for PBXNativeTarget "MET Base" */ = {
+		353D36F724D5A184004889A5 /* Build configuration list for PBXNativeTarget "METBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				353D36F824D5A184004889A5 /* Debug */,

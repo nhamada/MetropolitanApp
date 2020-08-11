@@ -26,5 +26,9 @@ public enum METRepository {
             let service = DepartmentsAPIService(configuration: configuration)
             return METDepartmentRepository(apiService: service)
         }
+        
+        public static func buildDepartmentRepository() -> DepartmentRepository {
+            return METCDDepartmentRepository(context: METBase.managedObjectContext)
+        }
     }
 }

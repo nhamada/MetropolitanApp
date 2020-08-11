@@ -18,4 +18,9 @@ public struct METDepartment {
         self.id = department.id
         self.displayName = department.displayName
     }
+    
+    internal init(from department: METCDDepartment) {
+        self.id = department.id
+        self.displayName = department.displayName
+    }
 }

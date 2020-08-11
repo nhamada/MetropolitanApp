@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		353D36F424D5A184004889A5 /* MET_Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 353D36F224D5A184004889A5 /* MET_Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		359FC97D24E2C0DD00466055 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359FC97C24E2C0DD00466055 /* CoreData.framework */; };
+		359FC98024E2C12100466055 /* METBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 359FC97E24E2C12100466055 /* METBase.xcdatamodeld */; };
+		359FC98424E2C30500466055 /* METBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98324E2C30500466055 /* METBase.swift */; };
+		359FC98724E2C51300466055 /* Bundle+SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98624E2C51300466055 /* Bundle+SDK.swift */; };
+		359FC98924E2D49900466055 /* METCDDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98824E2D49900466055 /* METCDDepartment.swift */; };
+		359FC98B24E2E41000466055 /* METCDDepartmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98A24E2E41000466055 /* METCDDepartmentRepository.swift */; };
 		35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */; };
 		35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD124D83B7600B2DFE1 /* Request.swift */; };
 		35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F46BD324D83B7F00B2DFE1 /* Response.swift */; };
@@ -36,6 +42,12 @@
 		353D36EF24D5A184004889A5 /* METBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = METBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353D36F224D5A184004889A5 /* MET_Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MET_Base.h; sourceTree = "<group>"; };
 		353D36F324D5A184004889A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359FC97C24E2C0DD00466055 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		359FC97F24E2C12100466055 /* METEntities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = METEntities.xcdatamodel; sourceTree = "<group>"; };
+		359FC98324E2C30500466055 /* METBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METBase.swift; sourceTree = "<group>"; };
+		359FC98624E2C51300466055 /* Bundle+SDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+SDK.swift"; sourceTree = "<group>"; };
+		359FC98824E2D49900466055 /* METCDDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METCDDepartment.swift; sourceTree = "<group>"; };
+		359FC98A24E2E41000466055 /* METCDDepartmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METCDDepartmentRepository.swift; sourceTree = "<group>"; };
 		35F46BCE24D83A7600B2DFE1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		35F46BD124D83B7600B2DFE1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		35F46BD324D83B7F00B2DFE1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -65,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359FC97D24E2C0DD00466055 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 				353D36FA24D5A194004889A5 /* Sources */,
 				353D36FB24D5A1A5004889A5 /* Resources */,
 				353D36F024D5A184004889A5 /* Products */,
+				359FC97B24E2C0DD00466055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +105,9 @@
 		353D36FA24D5A194004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				359FC98524E2C50600466055 /* Extensions */,
+				359FC97E24E2C12100466055 /* METBase.xcdatamodeld */,
+				359FC98324E2C30500466055 /* METBase.swift */,
 				35F46BFE24DFEE5700B2DFE1 /* Builder */,
 				35F46BF324DD841100B2DFE1 /* Entity */,
 				35F46BE624DC27A800B2DFE1 /* Repository */,
@@ -108,6 +125,22 @@
 				353D36F324D5A184004889A5 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		359FC97B24E2C0DD00466055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				359FC97C24E2C0DD00466055 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		359FC98524E2C50600466055 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				359FC98624E2C51300466055 /* Bundle+SDK.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		35F46BCD24D83A5900B2DFE1 /* Service */ = {
@@ -151,6 +184,7 @@
 				35F46BF124DC49A800B2DFE1 /* METObjectIDListRepository.swift */,
 				35F46BE924DC287E00B2DFE1 /* DepartmentRepository.swift */,
 				35F46BEB24DC2B6B00B2DFE1 /* METDepartmentRepository.swift */,
+				359FC98A24E2E41000466055 /* METCDDepartmentRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -162,6 +196,7 @@
 				35F46BFA24DD85DE00B2DFE1 /* METObjectConstituent.swift */,
 				35F46BFC24DD85F400B2DFE1 /* METObjectTag.swift */,
 				35F46BF824DD848000B2DFE1 /* METDepartment.swift */,
+				359FC98824E2D49900466055 /* METCDDepartment.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -262,20 +297,25 @@
 				35F46BD724D9B23700B2DFE1 /* DepartmentsAPIRequest.swift in Sources */,
 				35F46BF524DD842200B2DFE1 /* METObject.swift in Sources */,
 				35F46BDF24DAE39B00B2DFE1 /* SearchAPIRequest.swift in Sources */,
+				359FC98B24E2E41000466055 /* METCDDepartmentRepository.swift in Sources */,
 				35F46BE324DAF25B00B2DFE1 /* ObjectAPIRequest.swift in Sources */,
 				35F46BE824DC27BC00B2DFE1 /* ObjectRepository.swift in Sources */,
 				35F46BF024DC48AF00B2DFE1 /* ObjectIDListRepository.swift in Sources */,
 				35F46BFB24DD85DE00B2DFE1 /* METObjectConstituent.swift in Sources */,
 				35F46BDD24D9BC2300B2DFE1 /* ObjectIDsAPIResponse.swift in Sources */,
+				359FC98724E2C51300466055 /* Bundle+SDK.swift in Sources */,
 				35F46BD924D9B49700B2DFE1 /* DepartmentsAPIResponse.swift in Sources */,
 				35F46BCF24D83A7600B2DFE1 /* NetworkService.swift in Sources */,
 				35F46BE524DAF29B00B2DFE1 /* ObjectAPIResponse.swift in Sources */,
+				359FC98924E2D49900466055 /* METCDDepartment.swift in Sources */,
 				35F46BEC24DC2B6B00B2DFE1 /* METDepartmentRepository.swift in Sources */,
+				359FC98424E2C30500466055 /* METBase.swift in Sources */,
 				35F46BF924DD848000B2DFE1 /* METDepartment.swift in Sources */,
 				35F46BD424D83B7F00B2DFE1 /* Response.swift in Sources */,
 				35F46C0024DFEE6700B2DFE1 /* RepositoryBuilder.swift in Sources */,
 				35F46BD224D83B7600B2DFE1 /* Request.swift in Sources */,
 				35F46BE124DAE70D00B2DFE1 /* SearchAPIResponse.swift in Sources */,
+				359FC98024E2C12100466055 /* METBase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +517,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		359FC97E24E2C12100466055 /* METBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				359FC97F24E2C12100466055 /* METEntities.xcdatamodel */,
+			);
+			currentVersion = 359FC97F24E2C12100466055 /* METEntities.xcdatamodel */;
+			path = METBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 353D36E624D5A184004889A5 /* Project object */;
 }

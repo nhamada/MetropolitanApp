@@ -15,6 +15,21 @@ public enum DepartmentLoadError: Error {
 
 public protocol DepartmentRepository {
     typealias LoadCompletionHandler = (Result<[METDepartment], DepartmentLoadError>) -> Void
+    typealias StoreCompletionHandler = (Bool) -> Void
     
     func load(completion: @escaping LoadCompletionHandler)
+    
+    func clear()
+    
+    func store(departments: [METDepartment], completion: StoreCompletionHandler)
+}
+
+extension DepartmentRepository {
+    func clear() {
+        fatalError("Unimplemented: \(#function)")
+    }
+    
+    func store(departments: [METDepartment], completion: StoreCompletionHandler) {
+        fatalError("Unimplemented: \(#function)")
+    }
 }

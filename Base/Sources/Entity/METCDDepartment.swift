@@ -10,6 +10,10 @@ import Foundation
 import CoreData
 
 internal final class METCDDepartment: NSManagedObject {
+    internal static var entityName: String {
+        "METCDDepartment"
+    }
+    
     @NSManaged var id: Int
     @NSManaged var displayName: String
 }

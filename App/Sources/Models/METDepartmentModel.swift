@@ -17,7 +17,7 @@ final class METDepartmentModel: DepartmentModel {
     
     init(apiRepository: DepartmentRepository,
          dbRepository: DepartmentRepository,
-         output: DepartmentModelOutput) {
+         output: DepartmentModelOutput? = nil) {
         self.apiRepository = apiRepository
         self.dbRepository = dbRepository
         self.output = output

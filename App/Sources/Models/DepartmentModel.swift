@@ -15,7 +15,7 @@ protocol DepartmentModelOutput: class {
 }
 
 protocol DepartmentModel {
-    var output: DepartmentModelOutput? { get }
+    var output: DepartmentModelOutput? { get set }
     
     func load()
 }

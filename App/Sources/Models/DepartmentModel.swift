@@ -11,7 +11,7 @@ import METBase
 
 protocol DepartmentModelOutput: class {
     func onLoad(departments: [METDepartment])
-    func onFailLoadindg()
+    func onFailLoading()
 }
 
 protocol DepartmentModel {

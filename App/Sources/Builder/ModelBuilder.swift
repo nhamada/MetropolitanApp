@@ -9,7 +9,7 @@
 import Foundation
 import METBase
 
-enum AppBuilder {
+extension AppBuilder {
     static func buildDepartmentModel(output: DepartmentModelOutput? = nil) -> DepartmentModel {
         let apiRepository = METRepository.Builder.buildDepartmentRepository(configuration: .ephemeral)
         let dbRepository = METRepository.Builder.buildDepartmentRepository()

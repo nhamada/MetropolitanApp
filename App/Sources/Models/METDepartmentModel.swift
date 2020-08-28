@@ -13,7 +13,7 @@ final class METDepartmentModel: DepartmentModel {
     private let apiRepository: DepartmentRepository
     private let dbRepository: DepartmentRepository
     
-    private(set) weak var output: DepartmentModelOutput?
+    weak var output: DepartmentModelOutput?
     
     init(apiRepository: DepartmentRepository,
          dbRepository: DepartmentRepository,
@@ -33,6 +33,7 @@ final class METDepartmentModel: DepartmentModel {
             switch $0 {
             case .success(let items):
                 if !useDatabase {
+                    self?.dbRepository.clear()
                     self?.dbRepository.store(departments: items,
                                              completion: {
                                                 if $0 {
@@ -43,7 +44,7 @@ final class METDepartmentModel: DepartmentModel {
                 self?.output?.onLoad(departments: items)
             case .failure(let error):
                 NSLog("\(error)")
-                self?.output?.onFailLoadindg()
+                self?.output?.onFailLoading()
             }
         })
     }

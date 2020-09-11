@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		353D370B24D5A226004889A5 /* MuseumUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 353D370924D5A226004889A5 /* MuseumUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3559CB5B250A506E00327D65 /* FullscreenProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3559CB5A250A506E00327D65 /* FullscreenProgressView.xib */; };
+		3559CB5F250A508B00327D65 /* FullscreenProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559CB5E250A508B00327D65 /* FullscreenProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		353D370624D5A226004889A5 /* MuseumUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MuseumUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353D370924D5A226004889A5 /* MuseumUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuseumUI.h; sourceTree = "<group>"; };
 		353D370A24D5A226004889A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3559CB5A250A506E00327D65 /* FullscreenProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullscreenProgressView.xib; sourceTree = "<group>"; };
+		3559CB5E250A508B00327D65 /* FullscreenProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		353D371224D5A236004889A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3559CB5E250A508B00327D65 /* FullscreenProgressView.swift */,
+				3559CB5A250A506E00327D65 /* FullscreenProgressView.xib */,
 				353D370924D5A226004889A5 /* MuseumUI.h */,
 			);
 			path = Sources;
@@ -129,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3559CB5B250A506E00327D65 /* FullscreenProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3559CB5F250A508B00327D65 /* FullscreenProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

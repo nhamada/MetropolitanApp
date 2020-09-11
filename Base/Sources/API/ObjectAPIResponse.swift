@@ -78,10 +78,10 @@ internal struct ObjectAPIResponse: Response {
     internal let accessionNumber: String
     internal let accessionYear: String
     internal let isPublicDomain: Bool
-    internal let primaryImageURL: URL
-    internal let primaryImageSmallURL: URL
+    internal let primaryImageURL: URL?
+    internal let primaryImageSmallURL: URL?
     internal let additionalImageURLs: [URL]
-    internal let constituents: [Constituent]
+    internal let constituents: [Constituent]?
     internal let department: String
     internal let objectName: String
     internal let title: String
@@ -100,8 +100,8 @@ internal struct ObjectAPIResponse: Response {
     internal let artistBeginDate: String
     internal let artistEndDate: String
     internal let artistGender: String
-    internal let artistWikidata: URL
-    internal let artistULAN: URL
+    internal let artistWikidata: URL?
+    internal let artistULAN: URL?
     internal let objectDate: String
     internal let objectBeginDate: Int
     internal let objectEndDate: Int
@@ -125,7 +125,7 @@ internal struct ObjectAPIResponse: Response {
     internal let metadataDate: Date
     internal let repository: String
     internal let objectURL: URL?
-    internal let tags: [ObjectTag]
+    internal let tags: [ObjectTag]?
     internal let objectWikidata: URL?
     internal let isTimelineWork: Bool
     
@@ -139,10 +139,10 @@ internal struct ObjectAPIResponse: Response {
         self.accessionNumber = try container.decode(String.self, forKey: .accessionNumber)
         self.accessionYear = try container.decode(String.self, forKey: .accessionYear)
         self.isPublicDomain = try container.decode(Bool.self, forKey: .isPublicDomain)
-        self.primaryImageURL = try container.decode(URL.self, forKey: .primaryImage)
-        self.primaryImageSmallURL = try container.decode(URL.self, forKey: .primaryImageSmall)
+        self.primaryImageURL = try? container.decode(URL.self, forKey: .primaryImage)
+        self.primaryImageSmallURL = try? container.decode(URL.self, forKey: .primaryImageSmall)
         self.additionalImageURLs = try container.decode([URL].self, forKey: .additionalImages)
-        self.constituents = try container.decode([Constituent].self, forKey: .constituents)
+        self.constituents = try? container.decode([Constituent].self, forKey: .constituents)
         self.department = try container.decode(String.self, forKey: .department)
         self.objectName = try container.decode(String.self, forKey: .objectName)
         self.title = try container.decode(String.self, forKey: .title)
@@ -161,8 +161,8 @@ internal struct ObjectAPIResponse: Response {
         self.artistBeginDate = try container.decode(String.self, forKey: .artistBeginDate)
         self.artistEndDate = try container.decode(String.self, forKey: .artistEndDate)
         self.artistGender = try container.decode(String.self, forKey: .artistGender)
-        self.artistWikidata = try container.decode(URL.self, forKey: .artistWikidata)
-        self.artistULAN = try container.decode(URL.self, forKey: .artistULAN)
+        self.artistWikidata = try? container.decode(URL.self, forKey: .artistWikidata)
+        self.artistULAN = try? container.decode(URL.self, forKey: .artistULAN)
         self.objectDate = try container.decode(String.self, forKey: .objectDate)
         self.objectBeginDate = try container.decode(Int.self, forKey: .objectBeginDate)
         self.objectEndDate = try container.decode(Int.self, forKey: .objectEndDate)
@@ -187,7 +187,7 @@ internal struct ObjectAPIResponse: Response {
         self.metadataDate = dateFormatter.date(from: metadataDateString)!
         self.repository = try container.decode(String.self, forKey: .repository)
         self.objectURL = try? container.decode(URL.self, forKey: .objectURL)
-        self.tags = try container.decode([ObjectTag].self, forKey: .tags)
+        self.tags = try? container.decode([ObjectTag].self, forKey: .tags)
         self.objectWikidata = try? container.decode(URL.self, forKey: .objectWikidata)
         self.isTimelineWork = try container.decode(Bool.self, forKey: .isTimelineWork)
     }

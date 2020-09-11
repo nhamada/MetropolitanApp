@@ -16,10 +16,10 @@ public struct METObject {
     public let accessionNumber: String
     public let accessionYear: String
     public let isPublicDomain: Bool
-    public let primaryImageURL: URL
-    public let primaryImageSmallURL: URL
+    public let primaryImageURL: URL?
+    public let primaryImageSmallURL: URL?
     public let additionalImageURLs: [URL]
-    public let constituents: [METObjectConstituent]
+    public let constituents: [METObjectConstituent]?
     public let department: String
     public let objectName: String
     public let title: String
@@ -38,8 +38,8 @@ public struct METObject {
     public let artistBeginDate: String
     public let artistEndDate: String
     public let artistGender: String
-    public let artistWikidata: URL
-    public let artistULAN: URL
+    public let artistWikidata: URL?
+    public let artistULAN: URL?
     public let objectDate: String
     public let objectBeginDate: Int
     public let objectEndDate: Int
@@ -63,7 +63,7 @@ public struct METObject {
     public let metadataDate: Date
     public let repository: String
     public let objectURL: URL?
-    public let tags: [METObjectTag]
+    public let tags: [METObjectTag]?
     public let objectWikidata: URL?
     public let isTimelineWork: Bool
     
@@ -76,7 +76,7 @@ public struct METObject {
         self.primaryImageURL = object.primaryImageURL
         self.primaryImageSmallURL = object.primaryImageSmallURL
         self.additionalImageURLs = object.additionalImageURLs
-        self.constituents = object.constituents.map { METObjectConstituent(from: $0) }
+        self.constituents = object.constituents?.map { METObjectConstituent(from: $0) }
         self.department = object.department
         self.objectName = object.objectName
         self.title = object.title
@@ -120,7 +120,7 @@ public struct METObject {
         self.metadataDate = object.metadataDate
         self.repository = object.repository
         self.objectURL = object.objectURL
-        self.tags = object.tags.map { METObjectTag(from: $0) }
+        self.tags = object.tags?.map { METObjectTag(from: $0) }
         self.objectWikidata = object.objectWikidata
         self.isTimelineWork = object.isTimelineWork
     }

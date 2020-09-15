@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		353D371B24D5A307004889A5 /* MuseumUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; };
 		353D371C24D5A307004889A5 /* MuseumUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353D371624D5A2FF004889A5 /* MuseumUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3559CB5725039D9600327D65 /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559CB5625039D9600327D65 /* ObjectModel.swift */; };
+		3559CB5925039DB100327D65 /* METObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559CB5825039DB100327D65 /* METObjectModel.swift */; };
 		359FC98E24E56C7B00466055 /* DepartmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98D24E56C7B00466055 /* DepartmentModel.swift */; };
 		359FC99024E56CA900466055 /* METDepartmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC98F24E56CA900466055 /* METDepartmentModel.swift */; };
 		359FC99424EC0D1A00466055 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359FC99324EC0D1A00466055 /* AppSettings.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		353D371424D5A2FF004889A5 /* MET_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MET_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353D371624D5A2FF004889A5 /* MuseumUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MuseumUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3559CB5625039D9600327D65 /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
+		3559CB5825039DB100327D65 /* METObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METObjectModel.swift; sourceTree = "<group>"; };
 		359FC98D24E56C7B00466055 /* DepartmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentModel.swift; sourceTree = "<group>"; };
 		359FC98F24E56CA900466055 /* METDepartmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METDepartmentModel.swift; sourceTree = "<group>"; };
 		359FC99324EC0D1A00466055 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				359FC98D24E56C7B00466055 /* DepartmentModel.swift */,
 				359FC98F24E56CA900466055 /* METDepartmentModel.swift */,
+				3559CB5625039D9600327D65 /* ObjectModel.swift */,
+				3559CB5825039DB100327D65 /* METObjectModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F537C424F3EE88002135A3 /* GalleryPresenter.swift in Sources */,
+				3559CB5725039D9600327D65 /* ObjectModel.swift in Sources */,
 				35F537CA24F540AE002135A3 /* DepartmentViewItem.swift in Sources */,
 				35B8980E24D2DBBC00688368 /* AppDelegate.swift in Sources */,
 				35F537BE24F285B0002135A3 /* METGralleryInteractor.swift in Sources */,
@@ -272,6 +279,7 @@
 				35F537C624F3EE98002135A3 /* METGalleryPresenter.swift in Sources */,
 				35B8980C24D2DBBC00688368 /* SceneDelegate.swift in Sources */,
 				35F537C824F3F09A002135A3 /* PresenterBuilder.swift in Sources */,
+				3559CB5925039DB100327D65 /* METObjectModel.swift in Sources */,
 				359FC99A24EEC6BE00466055 /* ModelBuilder.swift in Sources */,
 				35F537BC24F2852E002135A3 /* GalleryInteractor.swift in Sources */,
 				35F537C224F3EB95002135A3 /* InteractorBuilder.swift in Sources */,

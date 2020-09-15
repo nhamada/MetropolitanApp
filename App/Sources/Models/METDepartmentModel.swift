@@ -44,7 +44,7 @@ final class METDepartmentModel: DepartmentModel {
                 self?.output?.onLoad(departments: items)
             case .failure(let error):
                 NSLog("\(error)")
-                self?.output?.onFailLoading()
+                self?.output?.onFailLoadingDepartments()
             }
         })
     }

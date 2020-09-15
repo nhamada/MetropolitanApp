@@ -9,8 +9,10 @@
 import Foundation
 
 extension AppBuilder {
-    static func buildGalleryInteractor(departmentModel: DepartmentModel) -> GalleryInteractor {
+    static func buildGalleryInteractor(departmentModel: DepartmentModel,
+                                       objectModel: ObjectModel) -> GalleryInteractor {
         let interactor = METGalleryInteractor(departmentModel: departmentModel,
+                                              objectModel: objectModel,
                                               output: nil)
         return interactor
     }

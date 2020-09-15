@@ -6,11 +6,13 @@
 //  Copyright © 2020 Naohiro Hamada. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import METBase
 
 protocol GalleryPresenterOutput {
     func requestRenderDepartments(departments: [DepartmentViewItem])
+    
+    func setBackgroundImage(image: UIImage?)
 }
 
 protocol GalleryPresenter {

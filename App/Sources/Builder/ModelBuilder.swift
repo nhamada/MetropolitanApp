@@ -17,4 +17,12 @@ extension AppBuilder {
                                   dbRepository: dbRepository,
                                   output: output)
     }
+    
+    static func buildObjectModel(output: ObjectModelOutput? = nil) -> ObjectModel {
+        let objectIDListRepository = METRepository.Builder.buildObjectIDsRepository(configuration: .default)
+        let objectRepository = METRepository.Builder.buildObjectRepository(configuration: .default)
+        return METObjectModel(objectIDListRepository: objectIDListRepository,
+                              objectRepository: objectRepository,
+                              output: output)
+    }
 }

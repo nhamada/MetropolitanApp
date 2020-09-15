@@ -14,7 +14,9 @@ enum AppBuilder {
 extension AppBuilder {
     static func buildGallery(_ viewController: GalleryViewController) {
         let departmentModel = AppBuilder.buildDepartmentModel()
-        var interactor = AppBuilder.buildGalleryInteractor(departmentModel: departmentModel)
+        let objectModel = AppBuilder.buildObjectModel()
+        var interactor = AppBuilder.buildGalleryInteractor(departmentModel: departmentModel,
+                                                           objectModel: objectModel)
         var presenter = AppBuilder.buildGalleryPresenter()
         
         interactor.output = presenter as? GalleryInteractorOutput

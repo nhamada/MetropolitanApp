@@ -6,7 +6,7 @@
 //  Copyright © 2020 Naohiro Hamada. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import METBase
 
 final class METGalleryPresenter: GalleryPresenter, GalleryInteractorOutput {
@@ -25,6 +25,27 @@ final class METGalleryPresenter: GalleryPresenter, GalleryInteractorOutput {
     }
     
     func onFailLoadingDepartments() {
+        // TODO: Error handling
+    }
+    
+    func onLoadRandomObject(object: METObject) {
+        NSLog("\(object)")
+        guard let imageURL = object.primaryImageURL else {
+            onFailLoadingRandomObject()
+            return
+        }
+        URLSession.shared.dataTask(with: imageURL,
+                                   completionHandler: { [weak self] (data, _, _) in
+                                    guard let data = data else {
+                                        self?.output?.setBackgroundImage(image: nil)
+                                        return
+                                    }
+                                    let image = UIImage(data: data, scale: 1.0)
+                                    self?.output?.setBackgroundImage(image: image)
+            }).resume()
+    }
+    
+    func onFailLoadingRandomObject() {
         // TODO: Error handling
     }
 }
